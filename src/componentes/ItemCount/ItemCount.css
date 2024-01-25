@@ -1,0 +1,38 @@
+.counter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    
+    
+  }
+  .contador {
+    color: #000;
+  }
+ 
+  .counter-container button {
+    background-color: #000000;
+    color: #fff;
+    width: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .counter-container p {
+    color: #000;
+  }
+  
+  .agregar {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .agregar:hover {
+    background-color: #218838;
+  }
