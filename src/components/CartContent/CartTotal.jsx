@@ -1,16 +1,16 @@
-import React from 'react'
-import { dataContext } from '../Context/DataContext'
-import { useContext } from 'react'
+import React, { useContext } from 'react';
+import { dataContext } from '../Context/DataContext';
 
-    
 const CartTotal = () => {
-  const {cart} = useContext(dataContext);
-  const total = cart.reduce((acc,it)=> acc + it.precio, 0);
+  const { cart } = useContext(dataContext);
+  
+  const total = cart.reduce((acc, product) => acc + (product.precio * product.quanty), 0);
+
   return (
     <div className='cartTotal'>
-        <h3>Total: ${total}</h3>
+      <h3>TOTAL: ${total}</h3>
     </div>
-  )
+  );
 }
 
-export default CartTotal
+export default CartTotal;

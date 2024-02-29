@@ -1,0 +1,28 @@
+.counter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    
+    
+  }
+  .contador {
+    color: #000;
+  }
+ 
+  .counter-container button {
+    background-color: #000000;
+    color: #fff;
+    width: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .counter-container p {
+    color: #000;
+  }
+  
+button {
+    height: 25px;
+}

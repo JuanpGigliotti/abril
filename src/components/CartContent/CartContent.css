@@ -32,3 +32,10 @@
   
   display: flex;
 }
+
+.cartTotal {
+  font-size: 2rem;
+  display: inline-block;
+  margin-left: 68%;
+  border-bottom: 1px solid black;
+}

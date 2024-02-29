@@ -1,23 +1,26 @@
-import { useContext } from "react";
-import { dataContext } from "../Context/DataContext";
+import React from 'react';
+import './CartItemCounter.css';
 
-const CartItemCounter = ({product}) => {
-  const { cart, setCart, buyProducts } = useContext(dataContext);
-
-  const decrese = () => {
-    const productrepeat = cart.find((item) => item.id === product.id);
-    
-
-    productrepeat.quanty !== 1 && setCart(cart.map((item) => (item.id === product.id ? {...product, quanty: productrepeat.quanty - 1 } : item)))
+const CartItemCounter = ({ product, updateCart }) => {
+  const incrementar = () => {
+    updateCart(product.id, product.quanty + 1);
   }
-  
+
+  const decrementar = () => {
+    if (product.quanty > 1) {
+      updateCart(product.id, product.quanty - 1);
+    }
+  }
+
   return (
-    <div className="counter">
-        <p className='counter-button' onClick={decrese}>-</p>
-        <p>{product.quanty}</p>
-        <p className='counter-button' onClick={()=> buyProducts(product)}>+</p>
-    </div>
-  )
+    <>
+      <div className="counter-container">
+        <button onClick={decrementar}> - </button>
+        <p className="contador"> {product.quanty} </p>
+        <button onClick={incrementar}> + </button>
+      </div>
+    </>
+  );
 }
 
-export default CartItemCounter
+export default CartItemCounter;
