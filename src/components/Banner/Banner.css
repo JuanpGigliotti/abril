@@ -1,0 +1,44 @@
+
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://www.agro.uba.ar/noticias/sites/default/files/2023-04/wine-4813260_960_720.jpg");
+  }
+  
+  .banner-container {
+    text-align: center;
+    padding: 15% 0;
+
+  }
+  
+  .banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 62px;
+    font-weight: bold;
+  }
+  
+  .categorias {
+    background-color: #ffffff;
+    padding-top: 1rem;
+    margin-top: 4rem;
+
+}
+.categorias ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+
+    list-style: none;
+    padding-bottom: 1rem;
+}
+
+.categorias ul li a {
+    text-decoration: none;
+    color: #000000;
+    
+}

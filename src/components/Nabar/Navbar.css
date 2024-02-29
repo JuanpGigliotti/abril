@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: black;
+    height: 10vh;
+}
+
+.navbar-logo {
+    padding-top: 1rem;
+    font-size: 60px;
+    margin-left: 45%;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.seeCarrito img {
+    margin-right: 30px;
+    margin-top: 22px;
+    width: 40px;
+    height: 40px;
+}

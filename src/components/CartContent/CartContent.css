@@ -1,0 +1,34 @@
+.cartContent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px double #ebebeb;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .cartContent img {
+    height: 180px;
+    text-align: center;
+  }
+.name, .price, .cart-delete, .counter {
+    padding-top: 5rem;
+    font-size: 25px;
+    
+}
+ 
+  .counter-button {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .cart-delete-button {
+    cursor: pointer;
+  }
+  
+.counter {
+  
+  display: flex;
+}
