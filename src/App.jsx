@@ -6,6 +6,8 @@ import Tinto from './components/Products/Categorias/Tinto';
 import Rosado from './components/Products/Categorias/Rosado';
 import Blanco from './components/Products/Categorias/Blanco';
 import Espumosos from './components/Products/Categorias/Espumosos'
+import Checkout from "./components/Checkout/Checkout";
+
 function App() {
   
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/tinto" element={<Tinto/>}></Route>
         <Route path='/' element= {<Home/>} /> 
         <Route path="/cart" element={<CartContent/>} />
+        <Route path="/checkout" element={<Checkout/>}/>
       </Routes>
       </BrowserRouter>
       </DataProvider>

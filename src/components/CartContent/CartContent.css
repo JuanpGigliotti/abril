@@ -39,3 +39,21 @@
   margin-left: 68%;
   border-bottom: 1px solid black;
 }
+
+.checkout {
+  display: block;
+  margin-left: 80%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout:hover {
+  background-color: green;
+}

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import CartElements from './CartElements'
 import CartTotal from './CartTotal'
-import { dataContext } from '../Context/DataContext'
+import { Link } from 'react-router-dom'
 
 const CartContent = () => {
 
@@ -9,6 +9,7 @@ const CartContent = () => {
     <>
     <CartElements/>
     <CartTotal/>
+    <Link to={"/checkout"}> <button className='checkout'> Finalizar Compra </button> </Link>
     </>
   )
   
