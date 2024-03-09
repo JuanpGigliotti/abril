@@ -1,26 +1,33 @@
 import { createContext, useState, useEffect } from "react";
-import {db} from "../../service/config";
+import { db } from "../../service/config";
 import { getDocs, collection, query } from "firebase/firestore";
 
-export const dataContext = createContext ();
+export const dataContext = createContext();
 
+const DataProvider = ({ children }) => {
+  const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-const DataProvider = ({children}) => {
-        const [data, setData] = useState([]);
-        const [cart, setCart] = useState([]);
-        useEffect (() => {
-            const misProductos = query (collection (db, "productos"))
-            
-            getDocs(misProductos)
-              .then(res => {
-                setData (res.docs.map(doc => ({id:doc.id, ...doc.data()})))
-              })
-          }, [])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "productos"));
+        const newData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    
-    return (
-        <dataContext.Provider value={{data, cart, setCart}}>{children}</dataContext.Provider>
-    )
-}
+    fetchData();
+  }, []);
 
-export default DataProvider
+  return (
+    <dataContext.Provider value={{ data, cart, setCart, selectedCategory, setSelectedCategory }}>
+      {children}
+    </dataContext.Provider>
+  );
+};
+
+export default DataProvider;

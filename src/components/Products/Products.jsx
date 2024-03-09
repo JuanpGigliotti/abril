@@ -15,7 +15,7 @@ const Products = () => {
                     <img src={product.img} alt="img-product-card" />
                     <h3>{product.nombre}</h3>
                     <h4>${product.precio}</h4>
-                    <button onClick={()=> buyProducts(product)}>ADD TO BAG</button>
+                    <button onClick={()=> buyProducts(product)}>Agregar al carrito</button>
                 </div>
             ))}
         </div>

@@ -3,7 +3,6 @@ import { dataContext } from '../Context/DataContext';
 import CartItemCounter from './CartItemCounter';
 import './CartContent.css';
 
-
 const CartElements = () => {
   const { cart, setCart } = useContext(dataContext);
   
@@ -23,22 +22,19 @@ const CartElements = () => {
     setCart(updatedCart);
   };
 
-
-
-  return cart.map((product) => {
-    return (
-      <section>
-              <div className="cartContent" key={product.id}>
-                  <img src={product.img} alt={product.nombre} />
-                  <h3 className="name">{product.nombre}</h3>
-                  <CartItemCounter product={product} updateCart={updateCart} />
-                  <h4 className="price">${product.precio}</h4>
-                  <h3 className="cart-delete" onClick={() => deleteProduct(product.id)}>X</h3>
-              </div>
-
+  return (
+    cart.map((product) => (
+      <section key={product.id}>
+        <div className="cartContent">
+          <img src={product.img} alt={product.nombre} />
+          <h3 className="name">{product.nombre}</h3>
+          <CartItemCounter product={product} updateCart={updateCart} />
+          <h4 className="price">${product.precio}</h4>
+          <h3 className="cart-delete" onClick={() => deleteProduct(product.id)}>X</h3>
+        </div>
       </section>
-    );
-  });
+    ))
+  );
 };
 
 export default CartElements;

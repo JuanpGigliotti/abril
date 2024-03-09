@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
     <div className='nav-container'>
         <nav className='navbar'>
-        <h1 className='navbar-logo'>WINE NOT</h1>
-        <Link className='seeCarrito' to={"/cart"}> <img src='./img/Cart.png'></img> </Link>
+        <Link className='navbar-logo' to={"/"}>WINE NOT</Link>
+        <Link className='seeCarrito' to={"/cart"}> <img src='../../../public/img/Cart.png'></img> </Link>
         </nav>
 
     </div>

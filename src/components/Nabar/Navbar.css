@@ -12,6 +12,7 @@
 }
 
 .navbar-logo {
+    text-decoration: none;
     padding-top: 1rem;
     font-size: 60px;
     margin-left: 45%;
